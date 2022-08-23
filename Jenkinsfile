@@ -5,7 +5,6 @@
 // to .gitignore it
 // For instructions on setting up a Jenkins job,
 // Refer to the ReadMe <TBD>
-node('any') {
         def value = 'version_increment'
         withEnv(['BPA_BRANCH=BPA_DEVELOP_3.2.2', 'PACKAGING_REPO=develop']){
         stage('Preparation') {
@@ -107,4 +106,3 @@ node('any') {
         
        
         }
-}
