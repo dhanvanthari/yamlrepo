@@ -78,23 +78,23 @@ node('apjc-sio-slv02') {
                             parameters([
                                 [$class: 'ChoiceParameter', 
                                     choiceType: 'PT_RADIOs', 
-                                    description: 'Select the Environemnt from the Dropdown List', 
+                                    description: 'Select the bundle', 
                                     filterLength: 1, 
                                     filterable: false, 
-                                    name: 'Env', 
+                                    name: 'Build', 
                                     script: [
                                         $class: 'GroovyScript', 
                                         fallbackScript: [
                                             classpath: [], 
-                                            sandbox: false, 
+                                            sandbox: true, 
                                             script: 
-                                                "return['Could not get The environemnts']"
+                                                "return['Could not get the bundles']"
                                         ], 
                                         script: [
                                             classpath: [], 
-                                            sandbox: false, 
+                                            sandbox: true, 
                                             script: 
-                                                "return['dev','stage','prod']"
+                                                "return['Build all core packages:selected','Build all Addon packages','Build both core and Addon packages']"
                                         ]
                                     ]
                                 ]
