@@ -17,7 +17,7 @@ node('Built-In Node') {
             checkout(
                     [
                         $class: 'GitSCM',
-                        branches: [[name: '*/master']],
+                        branches: [[name: '*/main']],
                         doGenerateSubmoduleConfigurations: false,
                         extensions: [
                             [
@@ -45,7 +45,7 @@ node('Built-In Node') {
             checkout(
                     [
                         $class: 'GitSCM',
-                        branches: [[name: '*/master']],
+                        branches: [[name: '*/main']],
                         doGenerateSubmoduleConfigurations: false,
                         extensions: [
                             [
