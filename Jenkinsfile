@@ -5,7 +5,7 @@
 // to .gitignore it
 // For instructions on setting up a Jenkins job,
 // Refer to the ReadMe <TBD>
-node('apjc-sio-slv02') {
+node('Built-In Node') {
         def value = 'version_increment'
         withEnv(['BPA_BRANCH=BPA_DEVELOP_3.2.2', 'PACKAGING_REPO=develop']){
         stage('Preparation') {
@@ -17,7 +17,7 @@ node('apjc-sio-slv02') {
             checkout(
                     [
                         $class: 'GitSCM',
-                        branches: [[name: '*/UC-12']],
+                        branches: [[name: '*/master']],
                         doGenerateSubmoduleConfigurations: false,
                         extensions: [
                             [
@@ -35,8 +35,8 @@ node('apjc-sio-slv02') {
                         submoduleCfg: [],
                         userRemoteConfigs: [
                             [
-                                credentialsId: 'bpabuilduser.gen',
-                                url: 'https://bitbucket-eng-sjc1.cisco.com/bitbucket/scm/cf-bpa/bpa-ci-cd.git'
+                                credentialsId: '685f9bfc-289e-4228-8aa6-c00888ca3136',
+                                url: 'https://github.com/dhanvanthari/yamlrepo.git'
                             ]
                         ]
                     ]
@@ -45,7 +45,7 @@ node('apjc-sio-slv02') {
             checkout(
                     [
                         $class: 'GitSCM',
-                        branches: [[name: '*/UC-12']],
+                        branches: [[name: '*/master']],
                         doGenerateSubmoduleConfigurations: false,
                         extensions: [
                             [
@@ -63,8 +63,8 @@ node('apjc-sio-slv02') {
                         submoduleCfg: [],
                         userRemoteConfigs: [
                             [
-                                credentialsId: 'bpabuilduser.gen',
-                                url: 'https://bitbucket-eng-sjc1.cisco.com/bitbucket/scm/cf-bpa/bpa-ci-cd-non-core.git'
+                                credentialsId: '685f9bfc-289e-4228-8aa6-c00888ca3136',
+                                url: 'https://github.com/dhanvanthari/yamlrepo.git'
                             ]
                         ]
                     ]
