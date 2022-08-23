@@ -1,0 +1,558 @@
+version: "1"
+name: "bpa-core"
+bpaVersion: 3.2.997.518
+description: BPA Core Platform
+registryDockerImage: ${REGISTRY}/tools:registry_3.0.0-521
+   
+params:
+    REGISTRY: "containers.cisco.com/bpa"
+   
+dockerConfigs:
+    "containers.cisco.com/bpa": "~/.bpa"
+   
+packages:
+ ui:
+    market-variance:
+        npmPackage: '@cisco-bpa-platform/ui-market-variance'
+        npmVersion: 3.2.2-507
+        order: '11'
+        commitHash: 618c895440d29f8106fe7f470eb0429c934266db
+        Tag: ToBeDone
+        queueFlag : false
+    script-runner:
+      npmPackage: '@cisco-bpa-platform/ui-script-runner'
+      npmVersion: 3.2.2-502
+      order: '19'
+      commitHash: 4f134f8f7e495d702aa6ed5c3d8094c1a4a36991
+      Tag: ToBeDone
+      queueFlag : false
+    config-validator:
+      npmPackage: '@cisco-bpa-platform/ui-config-validator'
+      npmVersion: 3.2.2-502
+      order: '08'
+      commitHash: 8882ab4fb22ae0ea186ddb2aa31b7676af93826c
+      Tag: ToBeDone
+      queueFlag: false
+    adapter-framework:
+      npmPackage: '@cisco-bpa-platform/ui-adapter-framework'
+      npmVersion: 3.2.997-501
+      order: '21'
+      commitHash: 079578e574dabbe3a229cc6c714c3a4f3b8063b6
+      Tag: ToBeDone
+      queueFlag : false
+    service-catalog:
+      npmPackage: '@cisco-bpa-platform/ui-service-catalog'
+      npmVersion: 3.2.2-502
+      order: '14'
+      commitHash: 2f0190aa5073885463c0e6e4e6e3f7dfaf24f010
+      Tag: ToBeDone
+      queueFlag : false
+    reporting:
+      npmPackage: '@cisco-bpa-platform/ui-reporting'
+      npmVersion: 3.2.2-502
+      order: '20'
+      commitHash: 9a44d212016711bf3cb0d04037596570a435a0e7
+      Tag: ToBeDone
+      queueFlag : false
+    central-form-designer:
+      npmPackage: '@cisco-bpa-platform/ui-central-form-designer'
+      npmVersion: 3.2.2-502
+      order: '18'
+      commitHash: 7a09192c04e1d09efb15a34d9d5642021fc1b4cf
+      Tag: ToBeDone
+      queueFlag : false
+    admin:
+      npmPackage: '@cisco-bpa-platform/ui-admin'
+      npmVersion: 3.2.997-518
+      order: '01'
+      commitHash: b05a1fae34e13e1df83d9729681b3fe56fd13174
+      Tag: ToBeDone
+      queueFlag: false
+    shared:
+      npmPackage: '@cisco-bpa-platform/ui-shared'
+      npmVersion: 3.2.997-511
+      order: '08'
+      commitHash: e500bedb00c88e6a373c4c138bac235f1e0e6b46
+      Tag: ToBeDone
+      queueFlag : false
+    jwt-login:
+      npmPackage: '@cisco-bpa-platform/ui-jwt-login'
+      npmVersion: 1.0.6
+      order: '17'
+      commitHash: 62425f73a3de01db0f8b27c474442d36c9d9d628
+      Tag: ToBeDone
+      queueFlag : false
+    os-upgrade:
+      npmPackage: '@cisco-bpa-platform/ui-os-upgrade'
+      npmVersion: 3.2.2-502
+      order: '05'
+      commitHash: f9cf17a272e64ad1a2d21af42ffe8044528e13f8
+      Tag: ToBeDone
+      queueFlag : false
+    workflow:
+      npmPackage: '@cisco-bpa-platform/ui-workflow'
+      npmVersion: 3.2.2-502
+      order: '09'
+      commitHash: 807fa1e45bdddd8ec99293a36b6c581e22d75e18
+      Tag: ToBeDone
+      queueFlag : false
+    event-action:
+      npmPackage: '@cisco-bpa-platform/ui-event-handler'
+      npmVersion: 3.2.2-502
+      order: '23'
+      commitHash: ac386994edc9c3f858369aac0ca1fa86949c9d57
+      Tag: ToBeDone
+      queueFlag : false
+    device-manager-two:
+      npmPackage: '@cisco-bpa-platform/ui-device-manager'
+      npmVersion: 3.2.997-531
+      order: '04'
+      commitHash: 2cbe202e52538ad330057e14815cfe5c6c6594ce
+      Tag: ToBeDone
+      queueFlag : false
+    command-templates:
+      npmPackage: '@cisco-bpa-platform/ui-command-templates'
+      npmVersion: 3.2.997-512
+      order: '06'
+      commitHash: 5e0f835b8c12c155c4ed49608142d97f238c5f91
+      Tag: ToBeDone
+      queueFlag : false
+    topology:
+      npmPackage: '@cisco-bpa-platform/ui-topology'
+      npmVersion: 3.2.2-502
+      order: '10'
+      commitHash: f8e6e2b9a0f6e7eed4585df4dcccfdd43063bb84
+      Tag: ToBeDone
+      queueFlag : false
+    pre-post:
+      npmPackage: '@cisco-bpa-platform/ui-pre-post'
+      npmVersion: 3.2.2-502
+      order: '16'
+      commitHash: ea90b9553ab43bc89b01f0ba59f5695f67ab1ff6
+      Tag: ToBeDone
+      queueFlag : false
+    core-services:
+      npmPackage: '@cisco-bpa-platform/ui-core-services'
+      npmVersion: 3.2.997-514
+      order: '08'
+      commitHash: 4da6ff5552ce42b2c6a77c43b2b554d95fdd746a
+      Tag: ToBeDone
+      queueFlag : false
+    core-essentials:
+      npmPackage: '@cisco-bpa-platform/ui-core-essentials'
+      npmVersion: 3.2.2-506
+      order: '08'
+      commitHash: 5cb6cb7aa7d8f6cc7ecc9c8d88ae7aec7ac
+      Tag: ToBeDone
+      queueFlag : false
+    template-manager:
+      npmPackage: '@cisco-bpa-platform/ui-template-manager'
+      npmVersion: 3.2.997-514
+      order: '07'
+      commitHash: d082e874bedbcb83c5f1c4b28a03b874a6c67ad3
+      Tag: ToBeDone
+      queueFlag : false
+    form-builder:
+      npmPackage: '@cisco-bpa-platform/ui-form-builder'
+      npmVersion: 3.2.2-502
+      order: '03'
+      commitHash: c5490cb1fa746bc6e226b594725c76ab6fe5e3a7
+      Tag: ToBeDone
+      queueFlag : false
+    commit-manager:
+      npmPackage: '@cisco-bpa-platform/ui-commit-manager'
+      npmVersion: 3.2.2-502
+      order: '15'
+      commitHash: 378065383c448e341be5fd42450e62083d952d00
+      Tag: ToBeDone
+      queueFlag : false
+    core-store:
+      npmPackage: '@cisco-bpa-platform/ui-core-store'
+      npmVersion: 3.2.997-518
+      order: '08'
+      commitHash: 0b157c8c2d4a916a5c5921b2e54315b9589ee902
+      Tag: ToBeDone
+      queueFlag : false
+    ansible-app:
+      npmPackage: '@cisco-bpa-platform/ui-ansible-app'
+      npmVersion: 3.2.2-502
+      order: '22'
+      commitHash: 4a6cd16377ca4f12ffd62485e8f8b2d55d68dde0
+      Tag: ToBeDone
+      queueFlag : false
+    service-manager:
+      npmPackage: '@cisco-bpa-platform/ui-service-manager'
+      npmVersion: 3.2.2-502
+      order: '02'
+      commitHash: 5d089a0e8b4b0385849653201ab86881114b3712
+      Tag: ToBeDone
+      queueFlag : false
+ services:
+    elk-logspout:
+      npmPackage: '@cisco-bpa-platform/cs-elk-logspout'
+      npmVersion: 3.2.2-502
+      order: '13'
+      commitHash: dd025e4057aa1bca190ab52d2a8d178ce747fef5
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/logspout:3.2.2-502
+      queueFlag : false
+    postgresdb:
+      npmPackage: '@cisco-bpa-platform/cs-postgresdb'
+      npmVersion: 3.2.0-502
+      order: '30'
+      commitHash: ToBeDone
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/postgres:patroni136-c9v1
+      dockerImages:
+        postgresdb: ${REGISTRY}/postgres:136-c9v1
+        postgres1node: ${REGISTRY}/postgres:136-c9v1
+      queueFlag : false
+    db-migrate:
+      npmPackage: '@cisco-bpa-platform/cs-db-migrate'
+      npmVersion: 3.2.997-509
+      order: '10'
+      commitHash: 3a544a56f3066bfd677fc2d8de5b215d270951d2
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/db-migrate:3.2.997-509
+      queueFlag: false
+    camunda-script-external-tasks:
+      npmPackage: '@cisco-bpa-platform/ms-camunda-script-external-tasks'
+      npmVersion: 3.2.0-501
+      order: '39'
+      commitHash: ToBeDone
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/camunda-script-external-tasks:3.2.1-11042022
+      queueFlag: false
+    ansible-controller-agent:
+      npmPackage: '@cisco-bpa-platform/mw-ansible-controller-agent'
+      npmVersion: 3.2.997-508
+      order: '38'
+      commitHash: 00def931bddc0e33c47405bfb378b093894ed212
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/ansible-controller-agent:3.2.997-508
+      queueFlag: false
+    kafka:
+      npmPackage: '@cisco-bpa-platform/cs-kafka'
+      npmVersion: 3.2.2-502
+      order: '15'
+      commitHash: aa3c141029d5dd75340ec2cbc84d15aebcf2737c
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/kafka:3.2.2-502
+      queueFlag : false
+    camunda:
+      npmPackage: '@cisco-bpa-platform/cs-camunda'
+      npmVersion: 3.2.997-515
+      order: '12'
+      commitHash: 2b31fcca9f24c22c763816c58cdfd9501e65dc77
+      Tag: 
+        - bpa-camunda-connector: 1.1.1
+        - camunda-connector-commitHash: 30f51f173ba1d7663f55f2d26754ce58a51f7ae0
+        - bpa-camunda-data-source-factory: 0.0.0
+        - camunda-data-source-factory-commitHash: 3a9422028f04f0aa48059b8a0645cc86911cbc044321
+      dockerImage: ${REGISTRY}/camunda:3.2.997-515
+      dockerImages:
+        kong: ${REGISTRY}/kong:3.2.1-kong25v1
+      queueFlag : false
+    prometheus-nginx-exporter:
+      npmPackage: '@cisco-bpa-platform/cs-prometheus-nginx-exporter'
+      npmVersion: 3.2.2-502
+      order: '27'
+      commitHash: 05ca4ede994246af42d5481dab2d0fab31b02097
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/prometheus-nginxexporter:3.2.2-502
+      queueFlag : false
+    command-templates:
+      npmPackage: '@cisco-bpa-platform/mw-command-templates'
+      npmVersion: 3.2.997-510
+      order: '43'
+      commitHash: 5bda7e38b564399b11653fd21b2d3b400d6dcccb
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/command-templates:3.2.997-510
+      queueFlag: false
+    auth:
+      npmPackage: '@cisco-bpa-platform/mw-auth'
+      npmVersion: 3.2.997-520
+      order: '02'
+      commitHash: 935df147c4f90879c6672fa808d942df5e64100d
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/auth:3.2.997-520
+      queueFlag: false
+    ticketing:
+      npmPackage: '@cisco-bpa-platform/mw-ticketing'
+      npmVersion: 3.2.997-507
+      order: '09'
+      commitHash: 55c7f70907df445d1be833b0b50b99b24ea0cee9
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/ticketing:3.2.997-507
+      queueFlag: false
+    camunda-external-tasks:
+      npmPackage: '@cisco-bpa-platform/mw-camunda-external-tasks'
+      npmVersion: 3.2.2-501
+      order: '33'
+      commitHash: d0e7cb231c104f75646b7d5cccd7c6dab2d558b0
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/camunda-external-tasks:3.2.2-501
+      queueFlag : false
+    kong:
+      npmPackage: '@cisco-bpa-platform/cs-kong'
+      npmVersion: 3.2.997-kong25v8
+      order: '16'
+      commitHash: 35146a95f2052556895c3096309db41e2aeb4f1f
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/kong:3.2.1-kong25v1
+      queueFlag : false
+    core-services:
+      npmPackage: '@cisco-bpa-platform/mw-core'
+      npmVersion: 3.2.997-519
+      order: '01'
+      commitHash: 3ac802d05ef3d644355ceac15bd4b615b5fc4310
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/core:3.2.997-519
+      dockerImages:
+        mongodb: ${REGISTRY}/mongodb:3.2.2-501
+        kubernetes-dashboard: ${REGISTRY}/kubernetes-dashboard:v251
+        kubernetes-dashboard-metrics: ${REGISTRY}/kubernetes-dashboard:metrics-scraper-107
+        ingress-controller: ${REGISTRY}/ingress-controller:3.2.1-12042022
+        alpine-image: ${REGISTRY}/alpine:latest
+      queueFlag: false
+    portal:
+      npmPackage: '@cisco-bpa-platform/mw-portal'
+      npmVersion:  3.2.997-516
+      order: '31'
+      commitHash: 51321ef079bb6d7d8b29d20cb7cb66d134384c8b
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/portal:3.2.997-516
+      queueFlag : false
+    prometheus-grafana:
+      npmPackage: '@cisco-bpa-platform/cs-prometheus-grafana'
+      npmVersion: 3.2.2-502
+      order: '26'
+      commitHash: 51321ef079bb6d7d8b29d20cb7cb66d134384c8b
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/prometheus-grafana:3.2.2-502
+      queueFlag : false
+    script-runner:
+      npmPackage: '@cisco-bpa-platform/ms-script-runner'
+      npmVersion: 3.2.0-502
+      order: '35'
+      commitHash: ToBeDone
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/script-runner:3.2.1-11042022
+      queueFlag: false
+    service-catalog:
+      npmPackage: '@cisco-bpa-platform/mw-service-catalog'
+      npmVersion: 3.2.997-507
+      order: '08'
+      commitHash: b3642c8c442d5a7344b263eefdfb3c5b2b375b9a
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/service-catalog:3.2.997-507
+      queueFlag: false
+    milestones:
+      npmPackage: '@cisco-bpa-platform/mw-milestones'
+      npmVersion: 3.2.997-503
+      order: '06'
+      commitHash: 68eddbea15eba19feb2b82a6d1fb69f9092de51e
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/milestones:3.2.997-503
+      queueFlag: false
+    market-variance:
+      npmPackage: '@cisco-bpa-platform/mw-market-variance'
+      npmVersion: 3.2.997-506
+      order: '04'
+      commitHash: 15fc88221d4e86295c90f980cb0b02c040aed8ae
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/market-variance:3.2.997-506
+      queueFlag: false
+    event-action:
+      npmPackage: '@cisco-bpa-platform/mw-event-handler'
+      npmVersion: 3.2.997-509
+      order: '42'
+      commitHash: a0bf24cdf6dafec4d3cb106eafde002f52c65cb8
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/event-action:3.2.997-509
+      queueFlag: false
+    template-manager:
+      npmPackage: '@cisco-bpa-platform/mw-template-manager'
+      npmVersion: 3.2.997-513
+      order: '47'
+      commitHash: d92bba9f79668d880388af77d4c9ece37f9e849c
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/template-manager:3.2.997-513
+      queueFlag: false
+    device-manager:
+      npmPackage: '@cisco-bpa-platform/mw-device-manager'
+      npmVersion: 3.2.997-513
+      order: '46'
+      commitHash: f3e55a7337fbd80e962d631b5a82f966bebdceec
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/device-manager:3.2.997-513
+      queueFlag: false
+    prometheus-exporter:
+      npmPackage: '@cisco-bpa-platform/cs-prometheus-exporter'
+      npmVersion: 3.2.997-510
+      order: '25'
+      commitHash: 6ebb8f46d6a7b9c18165e26f6e4a9e866e7695c0
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/prometheus-exporter:3.2.997-510
+      queueFlag : false
+    keepalived:
+      npmPackage: '@cisco-bpa-platform/cs-keepalived'
+      npmVersion: 3.2.2-502
+      order: '18'
+      commitHash: 8d68297165573561957aea9e3c90c8a1a176a87a
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/keepalived:3.2.0-502
+      queueFlag : false
+    portainer:
+      npmPackage: '@cisco-bpa-platform/cs-portainer'
+      npmVersion: 3.2.2-502
+      order: '21'
+      commitHash: a946a28575795fac866c799e7451136c1c660711
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/portainer:3.2.2-502
+      queueFlag : false
+    elk:
+      npmPackage: '@cisco-bpa-platform/cs-elk'
+      npmVersion: 3.2.2-502
+      order: '14'
+      commitHash: 8346d6258cfa6f514691bba21e4f18a2b95e7ff9
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/elk:3.2.2-502
+      queueFlag : false
+    script-runner-helper:
+      npmPackage: '@cisco-bpa-platform/ms-script-runner-helper'
+      npmVersion: 3.2.0-502
+      order: '36'
+      commitHash: ToBeDone
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/script-runner-helper:3.2.1-11042022
+      queueFlag: false
+    agent-manager:
+      npmPackage: '@cisco-bpa-platform/mw-agent-manager'
+      npmVersion: 3.2.997-517
+      order: '44'
+      commitHash: a645d0ddcff963d3cf0df0950ffee37442e22abf
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/agent-manager:3.2.997-517
+      queueFlag: false
+    osupgrade:
+      npmPackage: '@cisco-bpa-platform/mw-osupgrade'
+      npmVersion: 3.2.997-506
+      order: '07'
+      commitHash: 43c179fd915c6d537fa88d71d25a5169fc76499a
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/osupgrade:3.2.2-503
+      queueFlag: false
+    cmd-analyzer:
+      npmPackage: '@cisco-bpa-platform/cs-cmd-analyzer'
+      npmVersion: 3.2.997-509
+      order: '11'
+      commitHash: 314e57810e572043a6de9c86d2a1e22fffd4ba00
+      Tag: 
+        - cmd-analyzer-maven-build: 3.2.0.5
+        - cmd-analyzer-maven-commitHash: 139e811d41554bf19b01a8de3c4e426ded18d3d4
+      dockerImage: ${REGISTRY}/cmd-analyzer:3.2.997-509
+      dockerImages:
+        mongodb: ${REGISTRY}/mongodb:3.2.2-501
+      queueFlag : false
+    prometheus:
+      npmPackage: '@cisco-bpa-platform/cs-prometheus'
+      npmVersion: 3.2.2-502
+      order: '22'
+      commitHash: 3c4ec8397f2abce2afb51bb8c5f9ef3dca9a06b9
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/prometheus:3.2.2-502
+      queueFlag : false
+    mongodb:
+      npmPackage: '@cisco-bpa-platform/cs-mongodb'
+      npmVersion: 3.2.2-501
+      order: '19'
+      commitHash: 839767d096add6a25eccbb19011d8805c141b0f7
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/mongodb:3.2.2-501
+      queueFlag : false
+    ingester:
+      npmPackage: '@cisco-bpa-platform/cs-ingester'
+      npmVersion: 3.2.997-505
+      order: '32'
+      commitHash: fecff1c796c815e1bd15cefa3e7b6b50736c277f
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/ingester:3.2.997-505
+      queueFlag : false
+    adapter-framework:
+      npmPackage: '@cisco-bpa-platform/mw-adapter-framework'
+      npmVersion: 3.2.997-509
+      order: '41'
+      commitHash: fb208dcc086d0c010535b274be60a603fc54ea95
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/adapter-framework:3.2.997-509
+      queueFlag: false
+    snmp-trap:
+      npmPackage: '@cisco-bpa-platform/cs-snmp-trap'
+      npmVersion: 3.2.2-502
+      order: '29'
+      commitHash: 3c4ec8397f2abce2afb51bb8c5f9ef3dca9a06b9
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/snmp-trap:3.2.1-080422
+      queueFlag: false
+    prometheus-node-exporter:
+      npmPackage: '@cisco-bpa-platform/cs-prometheus-node-exporter'
+      npmVersion: 3.2.2-502
+      order: '28'
+      commitHash: bf448b56b9a3705e6e39626eee80d7eba43fe20f
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/prometheus-nodeexporter:3.2.2-502
+      queueFlag : false
+    zookeeper:
+      npmPackage: '@cisco-bpa-platform/cs-zookeeper'
+      npmVersion: 3.2.2-502
+      order: '34'
+      commitHash: 031a4eaa71701fa3a1d2a3119fca308188e3cc2f
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/zookeeper:3.2.2-502
+      queueFlag : false
+    prometheus-cadvisor:
+      npmPackage: '@cisco-bpa-platform/cs-prometheus-cadvisor'
+      npmVersion: 3.2.2-502
+      order: '23'
+      commitHash: 05ca4ede994246af42d5481dab2d0fab31b02097
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/prometheus-cadvisor:3.2.2-502
+      queueFlag : false
+    reporting:
+      npmPackage: '@cisco-bpa-platform/mw-reporting'
+      npmVersion: 3.2.997-508
+      order: '37'
+      commitHash: b99fc724ee2920b20ae071421f8269f67828ef33
+      Tag: ToBeDone
+      dockerImage: ${REGISTRY}/reporting:3.2.997-508
+      queueFlag: false
+bundles:
+  - name: "multi-node"
+    npmPatches:
+      - npmPackage: "@cisco-bpa-platform/bpa-bundle-patch@3.2.999-1"
+        description: "This package containes change of mongo for ssl to tls"
+        order: "01"
+  - "helm-chart"
+  #- "npm-bundle"
+  #- "full-bundle"
+
+return[
+'Build all core packages:selected',
+'Build all Addon packages',
+'Build both core and Addon packages'
+]
+
+return['OnPrem:selected','Cloud']
+
+
+if(Build.equals("Build all core packages")){
+  return ["Sec-Auth","Svc-ingester"]
+}
+else if(Build.equals("Build all Addon packages")){
+  return ["Svc  DCNM agent","Svc DNAC agent"]
+}
+else if(Build.equals("Build both core and Addon packages")){
+  return ["Sec-Auth","Svc-ingester","Svc  DCNM agent","Svc DNAC agent"]
+}
+
